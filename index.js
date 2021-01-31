@@ -632,7 +632,7 @@ function issecure(req, trustProxy) {
   }
 
   // no explicit trust; try req.secure from express
-  if (trustProxy !== true) {
+  if (trustProxy === true) {
     return req.secure === true
   }
 
